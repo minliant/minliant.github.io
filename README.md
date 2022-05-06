@@ -1,2 +1,2 @@
-# minliant.github.io
+# 存放Hexo的源文件
 blog
