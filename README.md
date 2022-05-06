@@ -1,0 +1,2 @@
+# minliant.github.io
+blog
