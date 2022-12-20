@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MLP</title>
+    <url>/2022/05/10/MLP/</url>
+    <content><![CDATA[<h2 id="MLP（Multi-Layer-Perceptron）多层感知机"><a href="#MLP（Multi-Layer-Perceptron）多层感知机" class="headerlink" title="MLP（Multi-Layer Perceptron）多层感知机"></a>MLP（Multi-Layer Perceptron）多层感知机</h2><p>最初形态就是普通的感知机，一种模仿人工神经元用于分类任务的模型，最初的感知机可以用来解决二分类问题。其效果类似于SVM算法，实际上MLP的效果也类似于SVM，但两者各有优势，SVM对超参数没那么敏感，相对容易得到结果；而MLP则需要花更多的时间来调节超参数，但MLP“继承性”要优于SVM。最初的感知机模型由于无法解决异或类问题，曾很长一段时间被研究者所抛弃，但最后由于多层感知机的出现解决了这个问题，因此又得到了发展。</p>
+<span id="more"></span>
+
+<ul>
+<li><p>MLP除了输入输出层，它中间可以有多个隐含层。最简单的MLP需要有一层隐含层，即输入层、隐含层和输出层才能称为一个简单的神经网络。其主要用于分类任务，通过神经网络来学习特征，最后通过输出层输出分类结果，一般在MLP内部会使用非线性激活函数来激活非线性，如果不使用或使用线性函数，最后不管网络有多深，所学到的都是互相之间相关线性特征，达不到很好的分类效果。</p>
+<div align="center"> 
+  <img src="/images/blogimages/MLP模型.jpg" alt="神经元输出计算方法">
+</div>
+</li>
+<li><p>每个神经元的计算由上一层的所有神经元输出再乘以对应权重的和加上bias偏差构成</p>
+<div align="center"> 
+  <img src="/images/blogimages/输出计算.jpg" alt="神经元输出计算方法">
+</div>
+</li>
+<li><p>MLP的最简单实现可以通过pytorch框架的线性层直接实现，实际上就是一个只含有线性层的简单神经网络模型。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML</title>
     <url>/2022/05/09/HTML/</url>
     <content><![CDATA[<p><strong>HTML为一种用于创建网页的超文本标记语言。</strong></p>
@@ -52,31 +80,16 @@
       </tags>
   </entry>
   <entry>
-    <title>MLP</title>
-    <url>/2022/05/10/MLP/</url>
-    <content><![CDATA[<h2 id="MLP（Multi-Layer-Perceptron）多层感知机"><a href="#MLP（Multi-Layer-Perceptron）多层感知机" class="headerlink" title="MLP（Multi-Layer Perceptron）多层感知机"></a>MLP（Multi-Layer Perceptron）多层感知机</h2><p>最初形态就是普通的感知机，一种模仿人工神经元用于分类任务的模型，最初的感知机可以用来解决二分类问题。其效果类似于SVM算法，实际上MLP的效果也类似于SVM，但两者各有优势，SVM对超参数没那么敏感，相对容易得到结果；而MLP则需要花更多的时间来调节超参数，但MLP“继承性”要优于SVM。最初的感知机模型由于无法解决异或类问题，曾很长一段时间被研究者所抛弃，但最后由于多层感知机的出现解决了这个问题，因此又得到了发展。</p>
-<span id="more"></span>
+    <title>Python小工具：批量复制文件到指定目录</title>
+    <url>/2022/05/07/Python%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="从指定目录批量复制特定类型文件到指定目录"><a href="#从指定目录批量复制特定类型文件到指定目录" class="headerlink" title="从指定目录批量复制特定类型文件到指定目录"></a>从指定目录批量复制特定类型文件到指定目录</h3><span id="more"></span>
 
-<ul>
-<li><p>MLP除了输入输出层，它中间可以有多个隐含层。最简单的MLP需要有一层隐含层，即输入层、隐含层和输出层才能称为一个简单的神经网络。其主要用于分类任务，通过神经网络来学习特征，最后通过输出层输出分类结果，一般在MLP内部会使用非线性激活函数来激活非线性，如果不使用或使用线性函数，最后不管网络有多深，所学到的都是互相之间相关线性特征，达不到很好的分类效果。</p>
-<div align="center"> 
-  <img src="/images/blogimages/MLP模型.jpg" alt="神经元输出计算方法">
-</div>
-</li>
-<li><p>每个神经元的计算由上一层的所有神经元输出再乘以对应权重的和加上bias偏差构成</p>
-<div align="center"> 
-  <img src="/images/blogimages/输出计算.jpg" alt="神经元输出计算方法">
-</div>
-</li>
-<li><p>MLP的最简单实现可以通过pytorch框架的线性层直接实现，实际上就是一个只含有线性层的简单神经网络模型。</p>
-</li>
-</ul>
-]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TraversalDir</span>(<span class="params">path</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        file_path = os.path.join(path,file)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(file_path):</span><br><span class="line">            result += TraversalDir(file_path)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(file_path):</span><br><span class="line">            result.append(file_path)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">input</span>(<span class="string">&#x27;请输入要遍历的目录：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">files = TraversalDir(root)</span><br><span class="line"></span><br><span class="line">output_dir = <span class="built_in">input</span>(<span class="string">&#x27;请输入要保存的新目录：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_dir):</span><br><span class="line">    os.makedirs(output_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line"></span><br><span class="line">    _,ext = os.path.splitext(file)</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span> <span class="keyword">or</span> ext == <span class="string">&#x27;.html&#x27;</span>:  <span class="comment">#指定要复制的文件类型</span></span><br><span class="line">        copy(file,output_dir)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;复制结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>深度学习</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>CNN</tag>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -135,19 +148,6 @@
       </categories>
       <tags>
         <tag>CNN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python小工具：批量复制文件到指定目录</title>
-    <url>/2022/05/07/Python%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<h3 id="从指定目录批量复制特定类型文件到指定目录"><a href="#从指定目录批量复制特定类型文件到指定目录" class="headerlink" title="从指定目录批量复制特定类型文件到指定目录"></a>从指定目录批量复制特定类型文件到指定目录</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TraversalDir</span>(<span class="params">path</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        file_path = os.path.join(path,file)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(file_path):</span><br><span class="line">            result += TraversalDir(file_path)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(file_path):</span><br><span class="line">            result.append(file_path)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">input</span>(<span class="string">&#x27;请输入要遍历的目录：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">files = TraversalDir(root)</span><br><span class="line"></span><br><span class="line">output_dir = <span class="built_in">input</span>(<span class="string">&#x27;请输入要保存的新目录：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_dir):</span><br><span class="line">    os.makedirs(output_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line"></span><br><span class="line">    _,ext = os.path.splitext(file)</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span> <span class="keyword">or</span> ext == <span class="string">&#x27;.html&#x27;</span>:  <span class="comment">#指定要复制的文件类型</span></span><br><span class="line">        copy(file,output_dir)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;复制结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
