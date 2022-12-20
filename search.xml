@@ -52,19 +52,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python小工具：批量复制文件到指定目录</title>
-    <url>/2022/05/07/Python%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
-    <content><![CDATA[<h3 id="从指定目录批量复制特定类型文件到指定目录"><a href="#从指定目录批量复制特定类型文件到指定目录" class="headerlink" title="从指定目录批量复制特定类型文件到指定目录"></a>从指定目录批量复制特定类型文件到指定目录</h3><span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TraversalDir</span>(<span class="params">path</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        file_path = os.path.join(path,file)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(file_path):</span><br><span class="line">            result += TraversalDir(file_path)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(file_path):</span><br><span class="line">            result.append(file_path)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">input</span>(<span class="string">&#x27;请输入要遍历的目录：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">files = TraversalDir(root)</span><br><span class="line"></span><br><span class="line">output_dir = <span class="built_in">input</span>(<span class="string">&#x27;请输入要保存的新目录：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_dir):</span><br><span class="line">    os.makedirs(output_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line"></span><br><span class="line">    _,ext = os.path.splitext(file)</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span> <span class="keyword">or</span> ext == <span class="string">&#x27;.html&#x27;</span>:  <span class="comment">#指定要复制的文件类型</span></span><br><span class="line">        copy(file,output_dir)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;复制结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MLP</title>
     <url>/2022/05/10/MLP/</url>
     <content><![CDATA[<h2 id="MLP（Multi-Layer-Perceptron）多层感知机"><a href="#MLP（Multi-Layer-Perceptron）多层感知机" class="headerlink" title="MLP（Multi-Layer Perceptron）多层感知机"></a>MLP（Multi-Layer Perceptron）多层感知机</h2><p>最初形态就是普通的感知机，一种模仿人工神经元用于分类任务的模型，最初的感知机可以用来解决二分类问题。其效果类似于SVM算法，实际上MLP的效果也类似于SVM，但两者各有优势，SVM对超参数没那么敏感，相对容易得到结果；而MLP则需要花更多的时间来调节超参数，但MLP“继承性”要优于SVM。最初的感知机模型由于无法解决异或类问题，曾很长一段时间被研究者所抛弃，但最后由于多层感知机的出现解决了这个问题，因此又得到了发展。</p>
@@ -93,21 +80,16 @@
       </tags>
   </entry>
   <entry>
-    <title>卷积神经网络的特征融合</title>
-    <url>/2022/05/06/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88/</url>
-    <content><![CDATA[<h3 id="特征融合"><a href="#特征融合" class="headerlink" title="特征融合"></a>特征融合</h3><p>很多工作通过融合多层来提升检测和分割的性能，按照融合与预测的先后顺序，分类为早融合(Early fusion)和晚融合(Late fusion)。</p>
-<span id="more"></span>
+    <title>Python小工具：批量复制文件到指定目录</title>
+    <url>/2022/05/07/Python%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="从指定目录批量复制特定类型文件到指定目录"><a href="#从指定目录批量复制特定类型文件到指定目录" class="headerlink" title="从指定目录批量复制特定类型文件到指定目录"></a>从指定目录批量复制特定类型文件到指定目录</h3><span id="more"></span>
 
-<ul>
-<li>早融合(Early fusion): 先融合多层的特征，然后在融合后的特征上训练预测器（只在完全融合之后，才统一进行检测）。这类方法也被称为skip connection，即采用concat、add操作。这一思路的代表是Inside-Outside Net(ION)和HyperNet。 两个经典的特征融合方法：<br>（1）concat：系列特征融合，直接将两个特征进行连接。两个输入特征x和y的维数若为p和q，输出特征z的维数为p+q；<br>（2）add：并行策略[36]，将这两个特征向量组合成复向量，对于输入特征x和y，z &#x3D; x + iy，其中i是虚数单位。</li>
-<li>晚融合(Late fusion)：通过结合不同层的检测结果改进检测性能（尚未完成最终的融合之前，在部分融合的层上就开始进行检测，会有多层的检测，最终将多个检测结果进行融合）。这一类研究思路的代表有两种：<br>（1）feature不融合，多尺度的feture分别进行预测，然后对预测结果进行综合，如Single Shot MultiBox Detector (SSD) , Multi-scale CNN(MS-CNN)<br>（2）feature进行金字塔融合，融合后进行预测，如Feature Pyramid Network(FPN)等。</li>
-</ul>
-]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TraversalDir</span>(<span class="params">path</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        file_path = os.path.join(path,file)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(file_path):</span><br><span class="line">            result += TraversalDir(file_path)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(file_path):</span><br><span class="line">            result.append(file_path)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">input</span>(<span class="string">&#x27;请输入要遍历的目录：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">files = TraversalDir(root)</span><br><span class="line"></span><br><span class="line">output_dir = <span class="built_in">input</span>(<span class="string">&#x27;请输入要保存的新目录：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_dir):</span><br><span class="line">    os.makedirs(output_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line"></span><br><span class="line">    _,ext = os.path.splitext(file)</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span> <span class="keyword">or</span> ext == <span class="string">&#x27;.html&#x27;</span>:  <span class="comment">#指定要复制的文件类型</span></span><br><span class="line">        copy(file,output_dir)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;复制结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>深度学习</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>CNN</tag>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>
@@ -181,6 +163,24 @@
 <li>dropout；</li>
 <li>early stopping，就是在训练过程中若准确率不在上升，就提前停止模型训练，因为继续训练下去也没有意义，但是不是说一旦 下一次迭代比上一次准确率低就立即停止训练，实际中我们会设定一个缓冲的次数，可以是10次，20次等，若连续10次模型准确率都不在上升时，这时可以选择停止训练。</li>
 </ol>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>卷积神经网络的特征融合</title>
+    <url>/2022/05/06/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88/</url>
+    <content><![CDATA[<h3 id="特征融合"><a href="#特征融合" class="headerlink" title="特征融合"></a>特征融合</h3><p>很多工作通过融合多层来提升检测和分割的性能，按照融合与预测的先后顺序，分类为早融合(Early fusion)和晚融合(Late fusion)。</p>
+<span id="more"></span>
+
+<ul>
+<li>早融合(Early fusion): 先融合多层的特征，然后在融合后的特征上训练预测器（只在完全融合之后，才统一进行检测）。这类方法也被称为skip connection，即采用concat、add操作。这一思路的代表是Inside-Outside Net(ION)和HyperNet。 两个经典的特征融合方法：<br>（1）concat：系列特征融合，直接将两个特征进行连接。两个输入特征x和y的维数若为p和q，输出特征z的维数为p+q；<br>（2）add：并行策略[36]，将这两个特征向量组合成复向量，对于输入特征x和y，z &#x3D; x + iy，其中i是虚数单位。</li>
+<li>晚融合(Late fusion)：通过结合不同层的检测结果改进检测性能（尚未完成最终的融合之前，在部分融合的层上就开始进行检测，会有多层的检测，最终将多个检测结果进行融合）。这一类研究思路的代表有两种：<br>（1）feature不融合，多尺度的feture分别进行预测，然后对预测结果进行综合，如Single Shot MultiBox Detector (SSD) , Multi-scale CNN(MS-CNN)<br>（2）feature进行金字塔融合，融合后进行预测，如Feature Pyramid Network(FPN)等。</li>
+</ul>
 ]]></content>
       <categories>
         <category>深度学习</category>
