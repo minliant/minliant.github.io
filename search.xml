@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>HTML</title>
+    <url>/2022/05/09/HTML/</url>
+    <content><![CDATA[<p><strong>HTML为一种用于创建网页的超文本标记语言。</strong></p>
+<span id="more"></span>
+
+<h2 id="1-HTML语法规范"><a href="#1-HTML语法规范" class="headerlink" title="1. HTML语法规范"></a>1. HTML语法规范</h2><ol>
+<li>HTML标签是由尖括号包围的关键词，例如<code>&lt;html&gt;</code>。</li>
+<li>HTML标签通常是成对出现的，例如<code>&lt;html&gt;</code>和<code>&lt;/html&gt;</code>,我们称为双标签。标签对中第一个标签是开始标签，第二个是结束标签。</li>
+<li>有些特殊的标签必须是单个标签（极少情况），例如<code>&lt;br&gt;</code>，我们称为单标签。</li>
+</ol>
+<p>标签之间的关系：包含和并列<br>标准的html文件格式：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-常用的HTML标签"><a href="#2-常用的HTML标签" class="headerlink" title="2. 常用的HTML标签"></a>2. 常用的HTML标签</h2><ul>
+<li>&lt;head1&gt; &lt;&#x2F;head1&gt;：标题标签，共有6六级标题；</li>
+<li>&lt;p&gt; &lt;&#x2F;p&gt;：段落标签；</li>
+<li>&lt;br&gt;或&lt;br &#x2F;&gt;：换行标签；</li>
+<li>&lt;strong&gt; &lt;&#x2F;strong&gt;：加粗文本，属于文本格式化标签，其余还有倾斜，删除线，下划线；</li>
+<li>&lt;div&gt; &lt;&#x2F;div&gt;和&lt;span&gt; &lt;&#x2F;span&gt;：盒子标签，div是大盒子一行一个，span是小盒子一行多个；</li>
+<li>&lt;img src&#x3D;”URL”&gt;：图像标签，src是必须指定的属性，还有其他属性可以查阅资料；</li>
+<li>&lt;a herf&#x3D;”跳转目标”&gt; &lt;&#x2F;a&gt;：超链接标签，herf为要跳转的地址，锚点和下载链接等使用请查阅资料；</li>
+<li>&lt;!- -注释语句- -&gt;：注释语句；</li>
+<li>特殊字符使用请查阅资料；</li>
+<li>&lt;table&gt; &lt;&#x2F;table&gt;：表格标签，内置很多属性，具体请查阅资料；<ul>
+<li>&lt;tr&gt; &lt;&#x2F;tr&gt;：表格每行；</li>
+<li>&lt;td&gt; &lt;&#x2F;td&gt;：每行中的每个单元格；</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>&lt;thead&gt; &lt;&#x2F;thead&gt;：表头，用于将表格头部和表格内容分开；</li>
+<li>&lt;tbody&gt; &lt;&#x2F;tbody&gt;：表格主体</li>
+<li>&lt;ul&gt; &lt;&#x2F;ul&gt;：无序列表体，内部只能有&lt;li&gt;标签；</li>
+<li>&lt;li&gt; &lt;&#x2F;li&gt;：无序列表标签；</li>
+<li>&lt;ol&gt; &lt;&#x2F;ol&gt;：有序列表体，内部也用&lt;li&gt;标签；</li>
+<li>&lt;dl&gt; &lt;&#x2F;dl&gt;：自定义标签，内部还有&lt;dt&gt; &lt;&#x2F;dt&gt;,&lt;dd&gt; &lt;&#x2F;dd&gt;标签；</li>
+<li>&lt;form&gt; &lt;&#x2F;form&gt;：表单域；</li>
+<li>&lt;input type&#x3D;“属性值”&gt;：表单元素，内置很多属性，具体请查阅资料；</li>
+<li>&lt;label&gt; &lt;&#x2F;label&gt;：表单辅助标签；</li>
+<li>&lt;select&gt; &lt;&#x2F;select&gt;：表单辅助标签，内部至少要含有一个&lt;option&gt; &lt;&#x2F;option&gt;标签；</li>
+<li>&lt;textarea&gt; &lt;&#x2F;textarea&gt;：表单辅助标签，用于填写文本内容；</li>
+</ul>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python小工具：批量复制文件到指定目录</title>
+    <url>/2022/05/07/Python%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%89%B9%E9%87%8F%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h3 id="从指定目录批量复制特定类型文件到指定目录"><a href="#从指定目录批量复制特定类型文件到指定目录" class="headerlink" title="从指定目录批量复制特定类型文件到指定目录"></a>从指定目录批量复制特定类型文件到指定目录</h3><span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">TraversalDir</span>(<span class="params">path</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> file <span class="keyword">in</span> os.listdir(path):</span><br><span class="line">        file_path = os.path.join(path,file)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(file_path):</span><br><span class="line">            result += TraversalDir(file_path)</span><br><span class="line">        <span class="keyword">if</span> os.path.isfile(file_path):</span><br><span class="line">            result.append(file_path)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">root = <span class="built_in">input</span>(<span class="string">&#x27;请输入要遍历的目录：&#x27;</span>)</span><br><span class="line"></span><br><span class="line">files = TraversalDir(root)</span><br><span class="line"></span><br><span class="line">output_dir = <span class="built_in">input</span>(<span class="string">&#x27;请输入要保存的新目录：&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_dir):</span><br><span class="line">    os.makedirs(output_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line"></span><br><span class="line">    _,ext = os.path.splitext(file)</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span> <span class="keyword">or</span> ext == <span class="string">&#x27;.html&#x27;</span>:  <span class="comment">#指定要复制的文件类型</span></span><br><span class="line">        copy(file,output_dir)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;复制结束&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MLP</title>
+    <url>/2022/05/10/MLP/</url>
+    <content><![CDATA[<h2 id="MLP（Multi-Layer-Perceptron）多层感知机"><a href="#MLP（Multi-Layer-Perceptron）多层感知机" class="headerlink" title="MLP（Multi-Layer Perceptron）多层感知机"></a>MLP（Multi-Layer Perceptron）多层感知机</h2><p>最初形态就是普通的感知机，一种模仿人工神经元用于分类任务的模型，最初的感知机可以用来解决二分类问题。其效果类似于SVM算法，实际上MLP的效果也类似于SVM，但两者各有优势，SVM对超参数没那么敏感，相对容易得到结果；而MLP则需要花更多的时间来调节超参数，但MLP“继承性”要优于SVM。最初的感知机模型由于无法解决异或类问题，曾很长一段时间被研究者所抛弃，但最后由于多层感知机的出现解决了这个问题，因此又得到了发展。</p>
+<span id="more"></span>
+
+<ul>
+<li><p>MLP除了输入输出层，它中间可以有多个隐含层。最简单的MLP需要有一层隐含层，即输入层、隐含层和输出层才能称为一个简单的神经网络。其主要用于分类任务，通过神经网络来学习特征，最后通过输出层输出分类结果，一般在MLP内部会使用非线性激活函数来激活非线性，如果不使用或使用线性函数，最后不管网络有多深，所学到的都是互相之间相关线性特征，达不到很好的分类效果。</p>
+<div align="center"> 
+  <img src="/images/blogimages/MLP模型.jpg" alt="神经元输出计算方法">
+</div>
+</li>
+<li><p>每个神经元的计算由上一层的所有神经元输出再乘以对应权重的和加上bias偏差构成</p>
+<div align="center"> 
+  <img src="/images/blogimages/输出计算.jpg" alt="神经元输出计算方法">
+</div>
+</li>
+<li><p>MLP的最简单实现可以通过pytorch框架的线性层直接实现，实际上就是一个只含有线性层的简单神经网络模型。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>卷积神经网络的特征融合</title>
+    <url>/2022/05/06/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88/</url>
+    <content><![CDATA[<h3 id="特征融合"><a href="#特征融合" class="headerlink" title="特征融合"></a>特征融合</h3><p>很多工作通过融合多层来提升检测和分割的性能，按照融合与预测的先后顺序，分类为早融合(Early fusion)和晚融合(Late fusion)。</p>
+<span id="more"></span>
+
+<ul>
+<li>早融合(Early fusion): 先融合多层的特征，然后在融合后的特征上训练预测器（只在完全融合之后，才统一进行检测）。这类方法也被称为skip connection，即采用concat、add操作。这一思路的代表是Inside-Outside Net(ION)和HyperNet。 两个经典的特征融合方法：<br>（1）concat：系列特征融合，直接将两个特征进行连接。两个输入特征x和y的维数若为p和q，输出特征z的维数为p+q；<br>（2）add：并行策略[36]，将这两个特征向量组合成复向量，对于输入特征x和y，z &#x3D; x + iy，其中i是虚数单位。</li>
+<li>晚融合(Late fusion)：通过结合不同层的检测结果改进检测性能（尚未完成最终的融合之前，在部分融合的层上就开始进行检测，会有多层的检测，最终将多个检测结果进行融合）。这一类研究思路的代表有两种：<br>（1）feature不融合，多尺度的feture分别进行预测，然后对预测结果进行综合，如Single Shot MultiBox Detector (SSD) , Multi-scale CNN(MS-CNN)<br>（2）feature进行金字塔融合，融合后进行预测，如Feature Pyramid Network(FPN)等。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu主题美化</title>
+    <url>/2022/05/12/Ubuntu%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="基于Ubuntu打造Big-Sur主题"><a href="#基于Ubuntu打造Big-Sur主题" class="headerlink" title="基于Ubuntu打造Big Sur主题"></a>基于Ubuntu打造Big Sur主题</h2><p>利用Tweaks工具美化Ubuntu20.04主题</p>
+<span id="more"></span>
+
+<h3 id="1-安装Tweaks软件和一些扩展包"><a href="#1-安装Tweaks软件和一些扩展包" class="headerlink" title="1. 安装Tweaks软件和一些扩展包"></a>1. 安装Tweaks软件和一些扩展包</h3><ul>
+<li>命令行执行下面命令安装<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install gnome<span class="literal">-tweak-tool</span> gnome<span class="literal">-shell-extensions</span> chrome<span class="literal">-gnome-shell</span></span><br></pre></td></tr></table></figure></li>
+<li>在Firefox浏览器安装插件browser entension<br>若尚未安装打开网址<strong><a href="https://extensions.gnome.org/">https://extensions.gnome.org</a></strong>会有click here提示安装，按提示安装即可。</li>
+<li>安装gnome主题更换支持包<ol>
+<li>打开网址<strong><a href="https://extensions.gnome.org/">https://extensions.gnome.org</a></strong>，搜索相应的包，点击打开页面后右边会有一个可点击的按钮（ON&#x2F;OFF），设置为ON即可安装；</li>
+<li>安装包：User Themes、Frippery Move Clock、Dynamic Panel Transparency、Compiz windows effect、Panel OSD；</li>
+<li>以上安装的包熟练后可自由选择其他包进行安装。</li>
+</ol>
+</li>
+<li>打开Tweaks软件进行窗口（Window）设置，将Center New Windows打开</li>
+<li>打开extensions软件，可以进行一下需要的界面调整<h3 id="2-安装Theme和一些icons"><a href="#2-安装Theme和一些icons" class="headerlink" title="2. 安装Theme和一些icons"></a>2. 安装Theme和一些icons</h3></li>
+<li>打开网址<strong><a href="https://www.pling.com/p/1403328">https://www.pling.com/p/1403328</a></strong>，此网址为Big Sur主题，若需其他主题可在该站中寻找</li>
+<li>点击页面中Files后点击DL（DownLoad）下载主题</li>
+<li>将压缩包解压后复制到&#x2F;usr&#x2F;share&#x2F;themes目录下，该目录是gnome默认存放主题的目录</li>
+<li>打开网址<strong><a href="https://www.pling.com/p/1399044">https://www.pling.com/p/1399044</a></strong>，此网址为icons下载网址，按上面步骤下载解压后将文件复制到&#x2F;usr&#x2F;share&#x2F;icons目录下，注意这里跟主题复制不一样，主题是直接解压后整个复制即可，而icons是解压后要打开文件夹，打开后会有两个子文件夹，将两个子文件复制即可。</li>
+<li>打开网址<strong><a href="https://www.pling.com/p/1355701">https://www.pling.com/p/1355701</a></strong>安装cursor（光标）主题，解压后同主题复制一样，但复制到icons目录下</li>
+<li>完成上述步骤即可打开Tweaks更换相应主题<h3 id="3-安装Dock栏主题"><a href="#3-安装Dock栏主题" class="headerlink" title="3. 安装Dock栏主题"></a>3. 安装Dock栏主题</h3></li>
+<li>安装CAIRO-DOCK，执行下面命令<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">sudo apt install cairo<span class="literal">-dock</span></span><br></pre></td></tr></table></figure></li>
+<li>打开Tweaks将cairo-dock设为开机自启项</li>
+<li>打开cairo-dock软件即可激活新的dock栏</li>
+<li>打开网址<strong><a href="https://www.pling.com/p/1401527">https://www.pling.com/p/1401527</a></strong>安装Dock栏主题美化包，可以不用解压</li>
+<li>打开cairo-dock configuration导入刚下载的主题即可，还可在这配置dock栏的图标增加或者删除。</li>
+<li>打开extensions软件找到Ubuntu Dock关闭，其他一些设置可自己慢慢尝试自己喜欢的主题<h3 id="4-下载桌面壁纸"><a href="#4-下载桌面壁纸" class="headerlink" title="4. 下载桌面壁纸"></a>4. 下载桌面壁纸</h3></li>
+<li>打开网址<strong><a href="https://www.pling.com/p/1401527">https://www.pling.com/p/1401527</a></strong>下载,下载后解压设置即可。</li>
+</ul>
+<p>注：其他另外一下美化设置可以自行查资料折腾，本笔记参考视频<a href="https://www.bilibili.com/video/BV1Wa4y1j73V?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click">将ubuntu20.04外观美化为macOS Big Sur风格</a>记录</p>
+]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>桌面美化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据集的分类和模型的选择</title>
+    <url>/2022/05/18/%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%80%89%E6%8B%A9/</url>
+    <content><![CDATA[<h3 id="数据集的分类和模型的选择"><a href="#数据集的分类和模型的选择" class="headerlink" title="数据集的分类和模型的选择"></a>数据集的分类和模型的选择</h3><ul>
+<li>训练集：用来训练模型的数据</li>
+<li>验证集：用于在模型训练时评估模型的好坏，方便调节超参数，验证集和训练集不允许存在数据重合</li>
+<li>测试集：用于检测模型的性能，一般而言，测试集数据只会使用一次，并且这部分数据的完全全新的数据，和训练集和验证集都没有关系。</li>
+</ul>
+<p>有一个很常用的训练手段，k折交叉验证，用来确定最好的超参数。</p>
+<span id="more"></span>
+
+<p>模型容量指的是模型的复杂度，或者说模型的学习能力，容量越大也就是复杂度越高，模型的学习能力就越强。同样，数据也有不同的复杂度；模型容量要符合数据的复杂度，否则容易导致欠拟合或过拟合。模型容量和数据复杂度不匹配就是导致过拟合的原因之一。</p>
+<div align="center">
+    <img src="image/blogimages/模型容量和过拟合.png" alt="模型容量和数据复杂度的关系">
+</div>
+
+<p>过拟合的原因：</p>
+<ol>
+<li>模型容量和数据复杂度不匹配；</li>
+<li>训练集和测试集的特征分布不一致，即测试集长存在太多训练集中没有出现的特征，因此模型本身就没有学习到这些特征；</li>
+<li>噪音干扰过大，导致本身不需要关注噪音的，但是模型却学习到了大量噪音特征；</li>
+<li>迭代次数过多，拟合了训练数据中的噪音和其他一些无用的特征。</li>
+</ol>
+<p>解决过拟合的方法：</p>
+<ol>
+<li>模型容量和数据复杂度相匹配；</li>
+<li>数据增强；</li>
+<li>正则化；</li>
+<li>dropout；</li>
+<li>early stopping，就是在训练过程中若准确率不在上升，就提前停止模型训练，因为继续训练下去也没有意义，但是不是说一旦 下一次迭代比上一次准确率低就立即停止训练，实际中我们会设定一个缓冲的次数，可以是10次，20次等，若连续10次模型准确率都不在上升时，这时可以选择停止训练。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+</search>
