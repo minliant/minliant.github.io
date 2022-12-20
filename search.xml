@@ -93,6 +93,24 @@
       </tags>
   </entry>
   <entry>
+    <title>卷积神经网络的特征融合</title>
+    <url>/2022/05/06/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88/</url>
+    <content><![CDATA[<h3 id="特征融合"><a href="#特征融合" class="headerlink" title="特征融合"></a>特征融合</h3><p>很多工作通过融合多层来提升检测和分割的性能，按照融合与预测的先后顺序，分类为早融合(Early fusion)和晚融合(Late fusion)。</p>
+<span id="more"></span>
+
+<ul>
+<li>早融合(Early fusion): 先融合多层的特征，然后在融合后的特征上训练预测器（只在完全融合之后，才统一进行检测）。这类方法也被称为skip connection，即采用concat、add操作。这一思路的代表是Inside-Outside Net(ION)和HyperNet。 两个经典的特征融合方法：<br>（1）concat：系列特征融合，直接将两个特征进行连接。两个输入特征x和y的维数若为p和q，输出特征z的维数为p+q；<br>（2）add：并行策略[36]，将这两个特征向量组合成复向量，对于输入特征x和y，z &#x3D; x + iy，其中i是虚数单位。</li>
+<li>晚融合(Late fusion)：通过结合不同层的检测结果改进检测性能（尚未完成最终的融合之前，在部分融合的层上就开始进行检测，会有多层的检测，最终将多个检测结果进行融合）。这一类研究思路的代表有两种：<br>（1）feature不融合，多尺度的feture分别进行预测，然后对预测结果进行综合，如Single Shot MultiBox Detector (SSD) , Multi-scale CNN(MS-CNN)<br>（2）feature进行金字塔融合，融合后进行预测，如Feature Pyramid Network(FPN)等。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>CNN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu主题美化</title>
     <url>/2022/05/12/Ubuntu%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<h2 id="基于Ubuntu打造Big-Sur主题"><a href="#基于Ubuntu打造Big-Sur主题" class="headerlink" title="基于Ubuntu打造Big Sur主题"></a>基于Ubuntu打造Big Sur主题</h2><p>利用Tweaks工具美化Ubuntu20.04主题</p>
@@ -130,24 +148,6 @@
       </categories>
       <tags>
         <tag>桌面美化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>卷积神经网络的特征融合</title>
-    <url>/2022/05/06/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%89%B9%E5%BE%81%E8%9E%8D%E5%90%88/</url>
-    <content><![CDATA[<h3 id="特征融合"><a href="#特征融合" class="headerlink" title="特征融合"></a>特征融合</h3><p>很多工作通过融合多层来提升检测和分割的性能，按照融合与预测的先后顺序，分类为早融合(Early fusion)和晚融合(Late fusion)。</p>
-<span id="more"></span>
-
-<ul>
-<li>早融合(Early fusion): 先融合多层的特征，然后在融合后的特征上训练预测器（只在完全融合之后，才统一进行检测）。这类方法也被称为skip connection，即采用concat、add操作。这一思路的代表是Inside-Outside Net(ION)和HyperNet。 两个经典的特征融合方法：<br>（1）concat：系列特征融合，直接将两个特征进行连接。两个输入特征x和y的维数若为p和q，输出特征z的维数为p+q；<br>（2）add：并行策略[36]，将这两个特征向量组合成复向量，对于输入特征x和y，z &#x3D; x + iy，其中i是虚数单位。</li>
-<li>晚融合(Late fusion)：通过结合不同层的检测结果改进检测性能（尚未完成最终的融合之前，在部分融合的层上就开始进行检测，会有多层的检测，最终将多个检测结果进行融合）。这一类研究思路的代表有两种：<br>（1）feature不融合，多尺度的feture分别进行预测，然后对预测结果进行综合，如Single Shot MultiBox Detector (SSD) , Multi-scale CNN(MS-CNN)<br>（2）feature进行金字塔融合，融合后进行预测，如Feature Pyramid Network(FPN)等。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>CNN</tag>
       </tags>
   </entry>
   <entry>
